@@ -45,10 +45,10 @@ if result.stderr == "":
         
         if int(output2) != 0:
             command3 = "defaults write -g com.apple.swipescrolldirection -bool false"
-            #Logger.info("Natrual scroll off")
+            Logger.info("Natrual scroll off")
             subprocess.run(command3,shell=True)
             command4 = "sudo pkill loginwindow"
-            #Logger.info("Log off")
+            Logger.info("Log off")
             subprocess.run(command4,shell=True)    
         else:
             exit()
@@ -60,10 +60,10 @@ if result.stderr == "":
 
         if int(output3) != 1:
             command6 = "defaults write -g com.apple.swipescrolldirection -bool true"
-            #Logger.info("Natrual scroll on")
+            Logger.info("Natrual scroll on")
             subprocess.run(command6,shell=True)
             command7 = "sudo pkill loginwindow"
-            #Logger.info("Log off")
+            Logger.info("Log off")
             subprocess.run(command7,shell=True) 
         else:
             exit()
